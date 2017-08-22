@@ -34,7 +34,7 @@ Navigate to `https://{yourOktaDomain}.com/oauth2/default` to see if your default
 > **Note:** Remember to set the `audience` of the authorization server to point to your app's host. For example, if you are running your PHP application on `http://localhost:3000`, set the `audience` to `http://localhost:3000`.
 
 # PHP Application Set-up
-Now that we have all the configuration at Okta done, we can begin setting up our PHP application. There are a couple of different ways to include the sign-in widget in your application. You can use the NPM module by installing `@okta/okta-signin-widget` in your project, or by using the Okta CDN, which is what we'll be using. Once you have the sign-in widget, there's a little bit of configuration you have to do to talk with your new authorization server.
+Now that we have all the configuration at Okta done, we can begin setting up our PHP application. There are a couple of different ways to include the sign-in widget in your application. You can use the NPM module by installing `@okta/okta-signin-widget` in your project, or by using the Okta CDN, which is what we&#8217;ll be using. Once you have the sign-in widget, there&#8217;s a little bit of configuration you have to do to talk with your new authorization server.
 
 ## Installing and Configuring the Sign In Widget
 There are 2 files we will require for the sign in widget to work, a JS file and a CSS file. You will also be able to supply a 3rd file from our CDN or supply your own for the theme of the signin widget.
@@ -218,7 +218,7 @@ $jws->verify($jwk, 'RS256');
 
 Each public key is identified by a `kid` attribute, which corresponds with the `kid` claim in the [Access Token header](/docs/api/resources/oauth2.html#token-authentication-methods).
 
-The access token is signed by an RSA private key, and we publish the future signing key well in advance. However, in an emergency situation you can still stay in sync with Okta's key rotation. Have your application check the `kid`, and if it has changed and the key is missing from the local cache, check the `jwks_uri` value in the [authorization server metadata](/docs/api/resources/oauth2.html#retrieve-authorization-server-metadata) and you can go back to the [jwks uri](/docs/api/resources/oauth2.html#get-keys) to get keys again from Okta
+The access token is signed by an RSA private key, and we publish the future signing key well in advance. However, in an emergency situation you can still stay in sync with Okta&#8217;s key rotation. Have your application check the `kid`, and if it has changed and the key is missing from the local cache, check the `jwks_uri` value in the [authorization server metadata](/docs/api/resources/oauth2.html#retrieve-authorization-server-metadata) and you can go back to the [jwks uri](/docs/api/resources/oauth2.html#get-keys) to get keys again from Okta
 
 Please note the following:
 
